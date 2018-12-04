@@ -73,8 +73,8 @@ var addGuest = function (params, ip, addBlessFunction, addBlessSuccess) {
 
 var updateGuest = function (params, ip, addBlessFunction, addBlessSuccess) {
     // 更新宾客信息
-    var updateGuestSql = "UPDATE guest SET name = ?,phone = ?,num = ?,ip = ?";
-    var sqlParams = [params.name, params.phone, params.num, ip];
+    var updateGuestSql = "UPDATE guest SET phone = ?,num = ?,ip = ? WHERE name = ?";
+    var sqlParams = [params.phone, params.num, ip, params.name];
     connection.query(updateGuestSql, sqlParams, function (err, result) {
         if (err) {
             console.log('[UPDATE ERROR] - ', err.message);
