@@ -5,9 +5,9 @@ var mysql = require('mysql');
 var URL = require('url');
 //创建连接
 var connection = mysql.createConnection({
-    host: 'daodaop.mysql.polardb.rds.aliyuncs.com',
-    user: 'daodao',
-    password: 'HpU!^qkyVvG7tft',
+    host: 'localhost',
+    user: 'root',
+    password: 'root',
     database: 'wedding'
 });
 //执行创建连接
